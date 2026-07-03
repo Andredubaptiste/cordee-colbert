@@ -88,6 +88,14 @@ section .image img {
     border-radius: 12px;
 }
 
+section .image-centree img {
+    display: block;
+    max-width: 300px;
+    width: 80%;
+    height: auto;
+    border-radius: 12px;
+}
+
 
 section.temoignages {
     background: #ffffff;
