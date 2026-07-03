@@ -88,13 +88,13 @@ section .image img {
     border-radius: 12px;
 }
 
-.image-centree img {
+.image-centree {
     display: block;
     max-width: 300px;
     width: 80%;
     height: auto;
     border-radius: 12px;
-    margin : 20 px auto:
+    margin : 20px auto:
 }
 
 
