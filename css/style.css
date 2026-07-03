@@ -88,7 +88,7 @@ section .image img {
     border-radius: 12px;
 }
 
-section .image-centree img {
+.image-centree img {
     display: block;
     max-width: 300px;
     width: 80%;
