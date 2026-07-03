@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #222;
+}
+
+.banner {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #001F3F;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    z-index: 1000;
+    font-weight: bold;
+}
+
+/*Gestion titre du site*/
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 20px;
+  gap: 20px;
+}
+.site-header h1 {
+    color: #000000;
+    font-size: 40px;
+    margin-top: 0;
+}
+.site-header h2 {
+    color: #000000;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+    text-align: center;
+    padding: 5em 1em 2em;
+    background: #f4f4f4;
+    margin-top: 2.5em;
+}
+
+section.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    background-color: #f4f4f4;
+    align-items: center;
+    justify-content: center;
+}
+
+section.content.alt {
+    flex-direction: row-reverse;
+    background-color: #ffffff
+    
+}
+
+section .text {
+    flex: 1 1 300px;
+    padding: 1em;
+}
+
+/*Gestion des images*/
+section .image {
+    flex: 1 1 300px;
+    padding: 1em;
+    text-align: center;
+}
+
+.logo{
+    max-width: 450px;
+    height: auto;
+    background-color: transparent
+}
+
+section .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+
+section.temoignages {
+    background: #ffffff;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+section.temoignages blockquote {
+    font-style: italic;
+    max-width: 50px;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background: #333;
+    color: white;
+}
+
+/*Gestion des titres*/
+
+h3 {
+    color: #173186;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+/*Gestion des listes*/
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+}
+
+.custom-list li::before {
+  content: "➤"; /* flèche élégante */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #007acc;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.highlight {
+  color: #173186;  
+  font-weight: bold;
+}
+
+/*Gestopn des tableaux*/
+th, td {
+  padding: 12px 24px; /* ← augmente ici la deuxième valeur pour élargir */
+}
+
+/*Gestion des vidéos*/
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Empile les éléments au lieu d'afficher en ligne */
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .site-header h1 {
+    font-size: 28px;
+  }
+
+  .site-header h2 {
+    font-size: 20px;
+  }
+
+  section.content {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  section.content.alt {
+    flex-direction: column; /* annule le row-reverse sur mobile */
+  }
+
+  section .text,
+  section .image {
+    flex: 1 1 100%;
+    padding: 1em 0;
+    text-align: center;
+  }
+
+  .custom-list li::before {
+    left: 5px;
+  }
+
+  th, td {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .video-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.temoin {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;              /* espace entre l'image et le texte */
+    max-width: 900px;
+    margin: 40px auto;      /* centré avec espace vertical */
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.temoin img {
+    width: 120px;           /* taille réduite */
+    height: 120px;
+    object-fit: cover;      /* garde un recadrage propre */
+    border-radius: 50%;     /* image en cercle (plus joli) */
+    flex-shrink: 0;         /* l'image ne rétrécit pas */
+    border: 3px solid #173186;
+}
+
+.temoin blockquote {
+    margin: 0;
+    font-style: italic;
+    line-height: 1.5;
+    color: #333;
+    flex: 1;    
+    min-width: 800px; 
+
+}
+
+/* Version mobile */
+@media screen and (max-width: 600px) {
+    .temoin {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .temoin img {
+        margin: auto;
+        width: 100px;
+        height: 100px;
+    }
+      .temoin blockquote {
+    min-width: 0;       /* empêche le dépassement */
+    width: 100%;        /* prend toute la largeur */
+    max-width: 100%;    /* sécurité */
+    min-width: 80%;    /* sécurité */
+  }
+}
+
+/*       <tr><th>Discipline</th><th>Première année (MP2I)</th><th>Seconde année (MPI)</th></tr>
+        <tr><td>Mathématiques</td><td>12 h</span></td><td>12 h</td></tr>
+        <tr><th></th><th><span class="highlight">+1h tutorat*</span></th><th></th></tr>
+        <tr><td>Informatique</td><td>4 h</td><td>6 h</td></tr>
+        <tr><td>Physique</td><td>6,5 h</td><td>7,5 h</td></tr>
+        <tr><th></th><th><span class="highlight">+1h tutorat*</span></th><th><span class="highlight">+1h tutorat*</span></th></tr>
+        <tr><th></th><th><span class="highlight">TP allongés de 0,5h*</span></th><th><span class="highlight">TP allongés de 0,5h*</span></th></tr>
+        <tr><td>Sciences de l'ingénieur</td><td>2 h</td></tr>
+        <tr><td>Anglais</td><td>2 h</td><td>2 h</td></tr>
+        <tr><td>Français/Philosophie</td><td>2 h</td><td>2 h</td></tr>
+        <tr><td>TIPE</td><td></td><td>2 h</td></tr>
+        <tr><td>EPS</td><td>2 h</td><td>2 h</td></tr> */
