@@ -91,10 +91,8 @@ section .image img {
 .image-centree {
     display: block;
     max-width: 300px;
-    width: 80%;
     height: auto;
     border-radius: 12px;
-    margin : 20px auto;
 }
 
 
