@@ -273,6 +273,20 @@ th, td {
   }
 }
 
+.bouton {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #0055A4;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.bouton:hover {
+    background-color: #003f7d;
+}
+
 /*       <tr><th>Discipline</th><th>Première année (MP2I)</th><th>Seconde année (MPI)</th></tr>
         <tr><td>Mathématiques</td><td>12 h</span></td><td>12 h</td></tr>
         <tr><th></th><th><span class="highlight">+1h tutorat*</span></th><th></th></tr>
